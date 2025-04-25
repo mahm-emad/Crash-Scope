@@ -1,0 +1,3452 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="3/30/2025 1:24:06 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-N4J2UNJ"
+  DTS:CreatorName="DESKTOP-N4J2UNJ\Nvidia"
+  DTS:DTSID="{CCE1AB61-21A1-47D0-A348-6700218634A3}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5685.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Crashes"
+  DTS:PackageType="5"
+  DTS:VersionBuild="55"
+  DTS:VersionGUID="{C89A1178-732B-4F37-BF5B-2C8A02414D4A}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-5VPE02Q\FARIDA.project]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{902129FD-654C-4A52-A9F4-39001A147454}"
+      DTS:ObjectName="DESKTOP-5VPE02Q\FARIDA.project">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-5VPE02Q\FARIDA;Initial Catalog=project;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package-{902129FD-654C-4A52-A9F4-39001A147454}DESKTOP-5VPE02Q\FARIDA.project;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-N4J2UNJ.Crash Scope DWH]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{F32205F0-7CF6-4F42-AF34-4114E91764C7}"
+      DTS:ObjectName="DESKTOP-N4J2UNJ.Crash Scope DWH">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-N4J2UNJ;Initial Catalog=Crash Scope DWH;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Crashes-{F32205F0-7CF6-4F42-AF34-4114E91764C7}DESKTOP-N4J2UNJ.Crash Scope DWH;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-N4J2UNJ.Crash Scope DWH 1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{7F7F19EA-1038-4B1E-AED9-D488013E4F33}"
+      DTS:ObjectName="DESKTOP-N4J2UNJ.Crash Scope DWH 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-N4J2UNJ;Initial Catalog=Crash Scope DWH;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Crashes-{7F7F19EA-1038-4B1E-AED9-D488013E4F33}DESKTOP-N4J2UNJ.Crash Scope DWH 1;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-N4J2UNJ.test1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{546E5675-3E1E-46B0-B2C1-CD1B22E78FC2}"
+      DTS:ObjectName="DESKTOP-N4J2UNJ.test1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-N4J2UNJ;Initial Catalog=test1;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package2-{546E5675-3E1E-46B0-B2C1-CD1B22E78FC2}DESKTOP-N4J2UNJ.test1;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{ADB54C42-1131-4590-9B28-B91489639CC9}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task\Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[INJURIES_TOTAL]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="INJURIES_TOTAL"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row].Columns[INJURIES_TOTAL]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">#{Package\Data Flow Task\XML Source.Outputs[row].Columns[INJURIES_FATAL]} == "NaN" || #{Package\Data Flow Task\XML Source.Outputs[row].Columns[INJURIES_TOTAL]} == "nan" || [LEN](#{Package\Data Flow Task\XML Source.Outputs[row].Columns[INJURIES_TOTAL]}) == 0 ? NULL(DT_I4) : (DT_I4)#{Package\Data Flow Task\XML Source.Outputs[row].Columns[INJURIES_TOTAL]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">INJURIES_FATAL == "NaN" || INJURIES_TOTAL == "nan" || LEN(INJURIES_TOTAL) == 0 ? NULL(DT_I4) : (DT_I4)INJURIES_TOTAL</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[INJURIES_FATAL]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="INJURIES_FATAL"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row].Columns[INJURIES_FATAL]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">#{Package\Data Flow Task\XML Source.Outputs[row].Columns[INJURIES_FATAL]} == "NaN" || #{Package\Data Flow Task\XML Source.Outputs[row].Columns[INJURIES_FATAL]} == "nan" || [LEN](#{Package\Data Flow Task\XML Source.Outputs[row].Columns[INJURIES_FATAL]}) == 0 ? NULL(DT_I4) : (DT_I4)#{Package\Data Flow Task\XML Source.Outputs[row].Columns[INJURIES_FATAL]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">INJURIES_FATAL == "NaN" || INJURIES_FATAL == "nan" || LEN(INJURIES_FATAL) == 0 ? NULL(DT_I4) : (DT_I4)INJURIES_FATAL</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[LATITUDE]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="LATITUDE"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row].Columns[LATITUDE]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">#{Package\Data Flow Task\XML Source.Outputs[row].Columns[LATITUDE]} == "NaN" || #{Package\Data Flow Task\XML Source.Outputs[row].Columns[LATITUDE]} == "nan" || [LEN](#{Package\Data Flow Task\XML Source.Outputs[row].Columns[LATITUDE]}) == 0 ? NULL(DT_R8) : (DT_R8)#{Package\Data Flow Task\XML Source.Outputs[row].Columns[LATITUDE]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">LATITUDE == "NaN" || LATITUDE == "nan" || LEN(LATITUDE) == 0 ? NULL(DT_R8) : (DT_R8)LATITUDE</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[LONGITUDE]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="LONGITUDE"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row].Columns[LONGITUDE]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">#{Package\Data Flow Task\XML Source.Outputs[row].Columns[LONGITUDE]} == "NaN" || #{Package\Data Flow Task\XML Source.Outputs[row].Columns[LONGITUDE]} == "nan" || [LEN](#{Package\Data Flow Task\XML Source.Outputs[row].Columns[LONGITUDE]}) == 0 ? NULL(DT_R8) : (DT_R8)#{Package\Data Flow Task\XML Source.Outputs[row].Columns[LONGITUDE]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">LONGITUDE == "NaN" || LONGITUDE == "nan" || LEN(LONGITUDE) == 0 ? NULL(DT_R8) : (DT_R8)LONGITUDE</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Derived-SSC"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived-SSC"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Derived-SSC.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Derived-SSC.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Data Flow Task\Derived-SSC.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived-SSC.Outputs[Derived Column Output].Columns[SSC]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Derived-SSC.Outputs[Derived Column Output].Columns[SSC]"
+                      name="SSC"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">1</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">1</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Derived-SSC.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Data Flow Task\Derived-SSC.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived-SSC.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Derived-SSC.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived-SSC.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Derived-SSC.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Dim Damage Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Dim Damage Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Dim_Damage]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Dim Damage Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-N4J2UNJ.Crash Scope DWH]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-N4J2UNJ.Crash Scope DWH]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Dim Damage Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Dim Damage Destination.Inputs[OLE DB Destination Input].Columns[FIRST_CRASH_TYPE]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="FIRST_CRASH_TYPE"
+                      externalMetadataColumnId="Package\Data Flow Task\Dim Damage Destination.Inputs[OLE DB Destination Input].ExternalColumns[FIRST_CRASH_TYPE]"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row].Columns[FIRST_CRASH_TYPE]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Dim Damage Destination.Inputs[OLE DB Destination Input].Columns[CRASH_TYPE]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="CRASH_TYPE"
+                      externalMetadataColumnId="Package\Data Flow Task\Dim Damage Destination.Inputs[OLE DB Destination Input].ExternalColumns[CRASH_TYPE]"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row].Columns[CRASH_TYPE]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Dim Damage Destination.Inputs[OLE DB Destination Input].Columns[DAMAGE]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="DAMAGE"
+                      externalMetadataColumnId="Package\Data Flow Task\Dim Damage Destination.Inputs[OLE DB Destination Input].ExternalColumns[DAMAGE]"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row].Columns[DAMAGE]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Dim Damage Destination.Inputs[OLE DB Destination Input].Columns[PRIM_CONTRIBUTORY_CAUSE]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="PRIM_CONTRIBUTORY_CAUSE"
+                      externalMetadataColumnId="Package\Data Flow Task\Dim Damage Destination.Inputs[OLE DB Destination Input].ExternalColumns[PRIM_CONTRIBUTORY_CAUSE]"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row].Columns[PRIM_CONTRIBUTORY_CAUSE]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Dim Damage Destination.Inputs[OLE DB Destination Input].Columns[SEC_CONTRIBUTORY_CAUSE]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="SEC_CONTRIBUTORY_CAUSE"
+                      externalMetadataColumnId="Package\Data Flow Task\Dim Damage Destination.Inputs[OLE DB Destination Input].ExternalColumns[SEC_CONTRIBUTORY_CAUSE]"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row].Columns[SEC_CONTRIBUTORY_CAUSE]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Dim Damage Destination.Inputs[OLE DB Destination Input].Columns[MOST_SEVERE_INJURY]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="MOST_SEVERE_INJURY"
+                      externalMetadataColumnId="Package\Data Flow Task\Dim Damage Destination.Inputs[OLE DB Destination Input].ExternalColumns[MOST_SEVERE_INJURY]"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row].Columns[MOST_SEVERE_INJURY]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Dim Damage Destination.Inputs[OLE DB Destination Input].Columns[SSC]"
+                      cachedDataType="i4"
+                      cachedName="SSC"
+                      externalMetadataColumnId="Package\Data Flow Task\Dim Damage Destination.Inputs[OLE DB Destination Input].ExternalColumns[SSC]"
+                      lineageId="Package\Data Flow Task\Derived-SSC.Outputs[Derived Column Output].Columns[SSC]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Dim Damage Destination.Inputs[OLE DB Destination Input].Columns[CRASH_RECORD_ID]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="CRASH_RECORD_ID"
+                      externalMetadataColumnId="Package\Data Flow Task\Dim Damage Destination.Inputs[OLE DB Destination Input].ExternalColumns[Crash_Record_ID_BK]"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row].Columns[CRASH_RECORD_ID]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Dim Damage Destination.Inputs[OLE DB Destination Input].ExternalColumns[FIRST_CRASH_TYPE]"
+                      dataType="wstr"
+                      length="100"
+                      name="FIRST_CRASH_TYPE" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Dim Damage Destination.Inputs[OLE DB Destination Input].ExternalColumns[CRASH_TYPE]"
+                      dataType="wstr"
+                      length="100"
+                      name="CRASH_TYPE" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Dim Damage Destination.Inputs[OLE DB Destination Input].ExternalColumns[DAMAGE]"
+                      dataType="wstr"
+                      length="50"
+                      name="DAMAGE" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Dim Damage Destination.Inputs[OLE DB Destination Input].ExternalColumns[PRIM_CONTRIBUTORY_CAUSE]"
+                      dataType="wstr"
+                      length="150"
+                      name="PRIM_CONTRIBUTORY_CAUSE" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Dim Damage Destination.Inputs[OLE DB Destination Input].ExternalColumns[SEC_CONTRIBUTORY_CAUSE]"
+                      dataType="wstr"
+                      length="150"
+                      name="SEC_CONTRIBUTORY_CAUSE" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Dim Damage Destination.Inputs[OLE DB Destination Input].ExternalColumns[MOST_SEVERE_INJURY]"
+                      dataType="wstr"
+                      length="100"
+                      name="MOST_SEVERE_INJURY" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Dim Damage Destination.Inputs[OLE DB Destination Input].ExternalColumns[Damage_ID_PK_SK]"
+                      dataType="i4"
+                      name="Damage_ID_PK_SK" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Dim Damage Destination.Inputs[OLE DB Destination Input].ExternalColumns[SSC]"
+                      dataType="i4"
+                      name="SSC" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Dim Damage Destination.Inputs[OLE DB Destination Input].ExternalColumns[start_date]"
+                      dataType="dbTimeStamp"
+                      name="start_date" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Dim Damage Destination.Inputs[OLE DB Destination Input].ExternalColumns[end_date]"
+                      dataType="dbDate"
+                      name="end_date" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Dim Damage Destination.Inputs[OLE DB Destination Input].ExternalColumns[is_current]"
+                      dataType="bool"
+                      name="is_current" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Dim Damage Destination.Inputs[OLE DB Destination Input].ExternalColumns[Crash_Record_ID_BK]"
+                      dataType="wstr"
+                      length="255"
+                      name="Crash_Record_ID_BK" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Dim Damage Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task\Dim Damage Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Dim Damage Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Dim Damage Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Dim Damage Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Dim Damage Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Dim_Road Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Dim_Road Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Dim_Road]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Dim_Road Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-N4J2UNJ.Crash Scope DWH]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-N4J2UNJ.Crash Scope DWH]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Dim_Road Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Dim_Road Destination.Inputs[OLE DB Destination Input].Columns[SSC]"
+                      cachedDataType="i4"
+                      cachedName="SSC"
+                      externalMetadataColumnId="Package\Data Flow Task\Dim_Road Destination.Inputs[OLE DB Destination Input].ExternalColumns[SSC]"
+                      lineageId="Package\Data Flow Task\Derived-SSC.Outputs[Derived Column Output].Columns[SSC]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Dim_Road Destination.Inputs[OLE DB Destination Input].Columns[ROAD_DEFECT]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="ROAD_DEFECT"
+                      externalMetadataColumnId="Package\Data Flow Task\Dim_Road Destination.Inputs[OLE DB Destination Input].ExternalColumns[ROAD_DEFECT]"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row].Columns[ROAD_DEFECT]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Dim_Road Destination.Inputs[OLE DB Destination Input].Columns[ROADWAY_SURFACE_COND]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="ROADWAY_SURFACE_COND"
+                      externalMetadataColumnId="Package\Data Flow Task\Dim_Road Destination.Inputs[OLE DB Destination Input].ExternalColumns[ROADWAY_SURFACE_COND]"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row].Columns[ROADWAY_SURFACE_COND]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Dim_Road Destination.Inputs[OLE DB Destination Input].Columns[ALIGNMENT]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="ALIGNMENT"
+                      externalMetadataColumnId="Package\Data Flow Task\Dim_Road Destination.Inputs[OLE DB Destination Input].ExternalColumns[ALIGNMENT]"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row].Columns[ALIGNMENT]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Dim_Road Destination.Inputs[OLE DB Destination Input].Columns[TRAFFICWAY_TYPE]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="TRAFFICWAY_TYPE"
+                      externalMetadataColumnId="Package\Data Flow Task\Dim_Road Destination.Inputs[OLE DB Destination Input].ExternalColumns[TRAFFICWAY_TYPE]"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row].Columns[TRAFFICWAY_TYPE]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Dim_Road Destination.Inputs[OLE DB Destination Input].Columns[POSTED_SPEED_LIMIT]"
+                      cachedDataType="ui1"
+                      cachedName="POSTED_SPEED_LIMIT"
+                      externalMetadataColumnId="Package\Data Flow Task\Dim_Road Destination.Inputs[OLE DB Destination Input].ExternalColumns[POSTED_SPEED_LIMIT]"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row].Columns[POSTED_SPEED_LIMIT]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Dim_Road Destination.Inputs[OLE DB Destination Input].Columns[LATITUDE]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="LATITUDE"
+                      externalMetadataColumnId="Package\Data Flow Task\Dim_Road Destination.Inputs[OLE DB Destination Input].ExternalColumns[LATITUDE]"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row].Columns[LATITUDE]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Dim_Road Destination.Inputs[OLE DB Destination Input].Columns[LONGITUDE]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="LONGITUDE"
+                      externalMetadataColumnId="Package\Data Flow Task\Dim_Road Destination.Inputs[OLE DB Destination Input].ExternalColumns[LONGITUDE]"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row].Columns[LONGITUDE]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Dim_Road Destination.Inputs[OLE DB Destination Input].Columns[CRASH_RECORD_ID]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="CRASH_RECORD_ID"
+                      externalMetadataColumnId="Package\Data Flow Task\Dim_Road Destination.Inputs[OLE DB Destination Input].ExternalColumns[Crash_Record_ID_BK]"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row].Columns[CRASH_RECORD_ID]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Dim_Road Destination.Inputs[OLE DB Destination Input].ExternalColumns[SSC]"
+                      dataType="i4"
+                      name="SSC" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Dim_Road Destination.Inputs[OLE DB Destination Input].ExternalColumns[start_date]"
+                      dataType="dbTimeStamp"
+                      name="start_date" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Dim_Road Destination.Inputs[OLE DB Destination Input].ExternalColumns[end_date]"
+                      dataType="dbTimeStamp"
+                      name="end_date" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Dim_Road Destination.Inputs[OLE DB Destination Input].ExternalColumns[is_current]"
+                      dataType="bool"
+                      name="is_current" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Dim_Road Destination.Inputs[OLE DB Destination Input].ExternalColumns[Road_ID_PK_SK]"
+                      dataType="i4"
+                      name="Road_ID_PK_SK" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Dim_Road Destination.Inputs[OLE DB Destination Input].ExternalColumns[ROADWAY_SURFACE_COND]"
+                      dataType="wstr"
+                      length="100"
+                      name="ROADWAY_SURFACE_COND" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Dim_Road Destination.Inputs[OLE DB Destination Input].ExternalColumns[ROAD_DEFECT]"
+                      dataType="wstr"
+                      length="50"
+                      name="ROAD_DEFECT" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Dim_Road Destination.Inputs[OLE DB Destination Input].ExternalColumns[ALIGNMENT]"
+                      dataType="wstr"
+                      length="100"
+                      name="ALIGNMENT" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Dim_Road Destination.Inputs[OLE DB Destination Input].ExternalColumns[TRAFFICWAY_TYPE]"
+                      dataType="wstr"
+                      length="100"
+                      name="TRAFFICWAY_TYPE" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Dim_Road Destination.Inputs[OLE DB Destination Input].ExternalColumns[POSTED_SPEED_LIMIT]"
+                      dataType="i4"
+                      name="POSTED_SPEED_LIMIT" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Dim_Road Destination.Inputs[OLE DB Destination Input].ExternalColumns[LATITUDE]"
+                      dataType="r8"
+                      name="LATITUDE" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Dim_Road Destination.Inputs[OLE DB Destination Input].ExternalColumns[LONGITUDE]"
+                      dataType="r8"
+                      name="LONGITUDE" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Dim_Road Destination.Inputs[OLE DB Destination Input].ExternalColumns[Crash_Record_ID_BK]"
+                      dataType="wstr"
+                      length="255"
+                      name="Crash_Record_ID_BK" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Dim_Road Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task\Dim_Road Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Dim_Road Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Dim_Road Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Dim_Road Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Dim_Road Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Dim_Surrounding_Conditions Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Dim_Surrounding_Conditions Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Dim_Surrounding_Conditions]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Dim_Surrounding_Conditions Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-N4J2UNJ.Crash Scope DWH]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-N4J2UNJ.Crash Scope DWH]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Dim_Surrounding_Conditions Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Dim_Surrounding_Conditions Destination.Inputs[OLE DB Destination Input].Columns[SSC]"
+                      cachedDataType="i4"
+                      cachedName="SSC"
+                      externalMetadataColumnId="Package\Data Flow Task\Dim_Surrounding_Conditions Destination.Inputs[OLE DB Destination Input].ExternalColumns[SSC]"
+                      lineageId="Package\Data Flow Task\Derived-SSC.Outputs[Derived Column Output].Columns[SSC]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Dim_Surrounding_Conditions Destination.Inputs[OLE DB Destination Input].Columns[WEATHER_CONDITION]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="WEATHER_CONDITION"
+                      externalMetadataColumnId="Package\Data Flow Task\Dim_Surrounding_Conditions Destination.Inputs[OLE DB Destination Input].ExternalColumns[WEATHER_CONDITION]"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row].Columns[WEATHER_CONDITION]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Dim_Surrounding_Conditions Destination.Inputs[OLE DB Destination Input].Columns[LIGHTING_CONDITION]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="LIGHTING_CONDITION"
+                      externalMetadataColumnId="Package\Data Flow Task\Dim_Surrounding_Conditions Destination.Inputs[OLE DB Destination Input].ExternalColumns[LIGHTING_CONDITION]"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row].Columns[LIGHTING_CONDITION]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Dim_Surrounding_Conditions Destination.Inputs[OLE DB Destination Input].Columns[CRASH_RECORD_ID]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="CRASH_RECORD_ID"
+                      externalMetadataColumnId="Package\Data Flow Task\Dim_Surrounding_Conditions Destination.Inputs[OLE DB Destination Input].ExternalColumns[Crash_Record_ID_BK]"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row].Columns[CRASH_RECORD_ID]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Dim_Surrounding_Conditions Destination.Inputs[OLE DB Destination Input].ExternalColumns[SSC]"
+                      dataType="i4"
+                      name="SSC" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Dim_Surrounding_Conditions Destination.Inputs[OLE DB Destination Input].ExternalColumns[start_date]"
+                      dataType="dbTimeStamp"
+                      name="start_date" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Dim_Surrounding_Conditions Destination.Inputs[OLE DB Destination Input].ExternalColumns[end_date]"
+                      dataType="dbTimeStamp"
+                      name="end_date" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Dim_Surrounding_Conditions Destination.Inputs[OLE DB Destination Input].ExternalColumns[is_current]"
+                      dataType="bool"
+                      name="is_current" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Dim_Surrounding_Conditions Destination.Inputs[OLE DB Destination Input].ExternalColumns[Surrounding_Conditions_ID_PK_SK]"
+                      dataType="i4"
+                      name="Surrounding_Conditions_ID_PK_SK" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Dim_Surrounding_Conditions Destination.Inputs[OLE DB Destination Input].ExternalColumns[WEATHER_CONDITION]"
+                      dataType="wstr"
+                      length="100"
+                      name="WEATHER_CONDITION" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Dim_Surrounding_Conditions Destination.Inputs[OLE DB Destination Input].ExternalColumns[LIGHTING_CONDITION]"
+                      dataType="wstr"
+                      length="100"
+                      name="LIGHTING_CONDITION" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Dim_Surrounding_Conditions Destination.Inputs[OLE DB Destination Input].ExternalColumns[Crash_Record_ID_BK]"
+                      dataType="wstr"
+                      length="255"
+                      name="Crash_Record_ID_BK" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Dim_Surrounding_Conditions Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task\Dim_Surrounding_Conditions Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Dim_Surrounding_Conditions Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Dim_Surrounding_Conditions Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Dim_Surrounding_Conditions Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Dim_Surrounding_Conditions Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Dim_Traffic_Control Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Dim_Traffic_Control Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Dim_Traffic_Control]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Dim_Traffic_Control Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-N4J2UNJ.Crash Scope DWH 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-N4J2UNJ.Crash Scope DWH 1]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Dim_Traffic_Control Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Dim_Traffic_Control Destination.Inputs[OLE DB Destination Input].Columns[TRAFFIC_CONTROL_DEVICE]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="TRAFFIC_CONTROL_DEVICE"
+                      externalMetadataColumnId="Package\Data Flow Task\Dim_Traffic_Control Destination.Inputs[OLE DB Destination Input].ExternalColumns[TRAFFIC_CONTROL_DEVICE]"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row].Columns[TRAFFIC_CONTROL_DEVICE]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Dim_Traffic_Control Destination.Inputs[OLE DB Destination Input].Columns[DEVICE_CONDITION]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="DEVICE_CONDITION"
+                      externalMetadataColumnId="Package\Data Flow Task\Dim_Traffic_Control Destination.Inputs[OLE DB Destination Input].ExternalColumns[DEVICE_CONDITION]"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row].Columns[DEVICE_CONDITION]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Dim_Traffic_Control Destination.Inputs[OLE DB Destination Input].Columns[SSC]"
+                      cachedDataType="i4"
+                      cachedName="SSC"
+                      externalMetadataColumnId="Package\Data Flow Task\Dim_Traffic_Control Destination.Inputs[OLE DB Destination Input].ExternalColumns[SSC]"
+                      lineageId="Package\Data Flow Task\Derived-SSC.Outputs[Derived Column Output].Columns[SSC]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Dim_Traffic_Control Destination.Inputs[OLE DB Destination Input].Columns[CRASH_RECORD_ID]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="CRASH_RECORD_ID"
+                      externalMetadataColumnId="Package\Data Flow Task\Dim_Traffic_Control Destination.Inputs[OLE DB Destination Input].ExternalColumns[Crash_Record_ID_BK]"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row].Columns[CRASH_RECORD_ID]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Dim_Traffic_Control Destination.Inputs[OLE DB Destination Input].ExternalColumns[TRAFFIC_CONTROL_DEVICE]"
+                      dataType="wstr"
+                      length="100"
+                      name="TRAFFIC_CONTROL_DEVICE" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Dim_Traffic_Control Destination.Inputs[OLE DB Destination Input].ExternalColumns[DEVICE_CONDITION]"
+                      dataType="wstr"
+                      length="100"
+                      name="DEVICE_CONDITION" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Dim_Traffic_Control Destination.Inputs[OLE DB Destination Input].ExternalColumns[Traffic_Control_ID_SK_PK]"
+                      dataType="i4"
+                      name="Traffic_Control_ID_SK_PK" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Dim_Traffic_Control Destination.Inputs[OLE DB Destination Input].ExternalColumns[SSC]"
+                      dataType="i4"
+                      name="SSC" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Dim_Traffic_Control Destination.Inputs[OLE DB Destination Input].ExternalColumns[start_date]"
+                      dataType="dbTimeStamp"
+                      name="start_date" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Dim_Traffic_Control Destination.Inputs[OLE DB Destination Input].ExternalColumns[end_date]"
+                      dataType="dbDate"
+                      name="end_date" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Dim_Traffic_Control Destination.Inputs[OLE DB Destination Input].ExternalColumns[is_current]"
+                      dataType="bool"
+                      name="is_current" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Dim_Traffic_Control Destination.Inputs[OLE DB Destination Input].ExternalColumns[Crash_Record_ID_BK]"
+                      dataType="wstr"
+                      length="255"
+                      name="Crash_Record_ID_BK" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Dim_Traffic_Control Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task\Dim_Traffic_Control Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Dim_Traffic_Control Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Dim_Traffic_Control Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Dim_Traffic_Control Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Dim_Traffic_Control Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Multicast"
+              componentClassID="Microsoft.Multicast"
+              contactInfo="Multicast;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Distributes every input row to every row in one or more outputs. For example, branch your data flow to make a copy of data so that some values can be masked before sharing with external partners."
+              name="Multicast">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Multicast.Inputs[Multicast Input 1]"
+                  name="Multicast Input 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Multicast.Outputs[Multicast Output 2]"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 2"
+                  synchronousInputId="Package\Data Flow Task\Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Multicast.Outputs[Multicast Output 3]"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 3"
+                  synchronousInputId="Package\Data Flow Task\Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Multicast.Outputs[Multicast Output 4]"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 4"
+                  synchronousInputId="Package\Data Flow Task\Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Multicast.Outputs[Multicast Output 6]"
+                  dangling="true"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 6"
+                  synchronousInputId="Package\Data Flow Task\Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Multicast.Outputs[Multicast Output 1]"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 1"
+                  synchronousInputId="Package\Data Flow Task\Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Script Component"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum.;Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;13"
+              description="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum."
+              name="Script Component"
+              version="13">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Stores the source code of the component"
+                  isArray="true"
+                  name="SourceCode"
+                  state="cdata">
+                  <arrayElements
+                    arrayElementCount="30">
+                    <arrayElement
+                      dataType="System.String"><![CDATA[ComponentWrapper.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[/* THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
+*  Microsoft SQL Server Integration Services component wrapper
+*  This module defines the base class for your component
+*  THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT! */
+
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Pipeline;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+using Microsoft.SqlServer.Dts.Runtime.Wrapper;
+
+public class UserComponent: ScriptComponent
+{
+    public Connections Connections;
+    public Variables Variables;
+    public UserComponent()
+    {
+        Connections = new Connections(this);
+        Variables = new Variables(this);
+    }
+
+    public override void ProcessInput(int InputID, string InputName, PipelineBuffer Buffer, OutputNameMap OutputMap)
+    {
+
+        if (InputName.Equals(@"Input 0", StringComparison.Ordinal))
+        {
+            Input0_ProcessInput(new Input0Buffer(Buffer, GetColumnIndexes(InputID), OutputMap));
+        }
+
+    }
+
+    public virtual void Input0_ProcessInput(Input0Buffer Buffer)
+    {
+        while (Buffer.NextRow())
+        {
+            Input0_ProcessInputRow(Buffer);
+        }
+    }
+
+    public virtual void Input0_ProcessInputRow(Input0Buffer Row)
+    {
+    }
+
+}
+
+public class Connections
+{
+    ScriptComponent ParentComponent;
+
+    public Connections(ScriptComponent Component)
+    {
+        ParentComponent = Component;
+    }
+
+}
+
+public class Variables
+{
+    ScriptComponent ParentComponent;
+
+    public Variables(ScriptComponent Component)
+    {
+        ParentComponent = Component;
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Resources.resx]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+</root>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[main.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[#region Help:  Introduction to the Script Component
+/* The Script Component allows you to perform virtually any operation that can be accomplished in
+ * a .Net application within the context of an Integration Services data flow.
+ *
+ * Expand the other regions which have "Help" prefixes for examples of specific ways to use
+ * Integration Services features within this script component. */
+#endregion
+
+#region Namespaces
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+using Microsoft.SqlServer.Dts.Runtime.Wrapper;
+#endregion
+
+/// <summary>
+/// This is the class to which to add your code.  Do not change the name, attributes, or parent
+/// of this class.
+/// </summary>
+[Microsoft.SqlServer.Dts.Pipeline.SSISScriptComponentEntryPointAttribute]
+public class ScriptMain : UserComponent
+{
+    #region Help:  Using Integration Services variables and parameters
+    /* To use a variable in this script, first ensure that the variable has been added to
+     * either the list contained in the ReadOnlyVariables property or the list contained in
+     * the ReadWriteVariables property of this script component, according to whether or not your
+     * code needs to write into the variable.  To do so, save this script, close this instance of
+     * Visual Studio, and update the ReadOnlyVariables and ReadWriteVariables properties in the
+     * Script Transformation Editor window.
+     * To use a parameter in this script, follow the same steps. Parameters are always read-only.
+     *
+     * Example of reading from a variable or parameter:
+     *  DateTime startTime = Variables.MyStartTime;
+     *
+     * Example of writing to a variable:
+     *  Variables.myStringVariable = "new value";
+     */
+    #endregion
+
+    #region Help:  Using Integration Services Connnection Managers
+    /* Some types of connection managers can be used in this script component.  See the help topic
+     * "Working with Connection Managers Programatically" for details.
+     *
+     * To use a connection manager in this script, first ensure that the connection manager has
+     * been added to either the list of connection managers on the Connection Managers page of the
+     * script component editor.  To add the connection manager, save this script, close this instance of
+     * Visual Studio, and add the Connection Manager to the list.
+     *
+     * If the component needs to hold a connection open while processing rows, override the
+     * AcquireConnections and ReleaseConnections methods.
+     * 
+     * Example of using an ADO.Net connection manager to acquire a SqlConnection:
+     *  object rawConnection = Connections.SalesDB.AcquireConnection(transaction);
+     *  SqlConnection salesDBConn = (SqlConnection)rawConnection;
+     *
+     * Example of using a File connection manager to acquire a file path:
+     *  object rawConnection = Connections.Prices_zip.AcquireConnection(transaction);
+     *  string filePath = (string)rawConnection;
+     *
+     * Example of releasing a connection manager:
+     *  Connections.SalesDB.ReleaseConnection(rawConnection);
+     */
+    #endregion
+
+    #region Help:  Firing Integration Services Events
+    /* This script component can fire events.
+     *
+     * Example of firing an error event:
+     *  ComponentMetaData.FireError(10, "Process Values", "Bad value", "", 0, out cancel);
+     *
+     * Example of firing an information event:
+     *  ComponentMetaData.FireInformation(10, "Process Values", "Processing has started", "", 0, fireAgain);
+     *
+     * Example of firing a warning event:
+     *  ComponentMetaData.FireWarning(10, "Process Values", "No rows were received", "", 0);
+     */
+    #endregion
+
+    /// <summary>
+    /// This method is called once, before rows begin to be processed in the data flow.
+    ///
+    /// You can remove this method if you don't need to do anything here.
+    /// </summary>
+    public override void PreExecute()
+    {
+        base.PreExecute();
+        /*
+         * Add your code here
+         */
+    }
+
+    /// <summary>
+    /// This method is called after all the rows have passed through this component.
+    ///
+    /// You can delete this method if you don't need to do anything here.
+    /// </summary>
+    public override void PostExecute()
+    {
+        base.PostExecute();
+        /*
+         * Add your code here
+         */
+    }
+
+    /// <summary>
+    /// This method is called once for every row that passes through the component from Input0.
+    ///
+    /// Example of reading a value from a column in the the row:
+    ///  string zipCode = Row.ZipCode
+    ///
+    /// Example of writing a value to a column in the row:
+    ///  Row.ZipCode = zipCode
+    /// </summary>
+    /// <param name="Row">The row that is currently passing through the component</param>
+    public override void Input0_ProcessInputRow(Input0Buffer Row)
+    {
+        // Convert day number to day name and determine if it's a weekend
+        if (!Row.CRASHDAYOFWEEK_IsNull)
+        {
+            string[] dayNames = { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" };
+
+            if (Row.CRASHDAYOFWEEK >= 1 && Row.CRASHDAYOFWEEK <= 7)
+            {
+                Row.dayname = dayNames[Row.CRASHDAYOFWEEK - 1]; // Convert number to day name
+                Row.isweekend = (byte)((Row.CRASHDAYOFWEEK == 1 || Row.CRASHDAYOFWEEK == 7) ? 1 : 0); // Convert to byte (0 or 1)
+            }
+            else
+            {
+                Row.dayname = "Invalid";
+                //Row.isweekend = "Unknown";
+            }
+        }
+        else 
+        {
+            Row.dayname = "Unknown";
+            //Row.isweekend = "Unknown";
+        }
+
+        // Convert month number to month name
+        if (!Row.CRASHMONTH_IsNull)
+        {
+            string[] monthNames = { "January", "February", "March", "April", "May", "June", "July",
+                                "August", "September", "October", "November", "December" };
+
+            if (Row.CRASHMONTH >= 1 && Row.CRASHMONTH <= 12)
+            {
+                Row.monthname = monthNames[Row.CRASHMONTH - 1]; // Convert number to month name
+            }
+            else
+            {
+                Row.monthname = "Invalid";
+            }
+        }
+        else
+        {
+            Row.monthname = "Unknown";
+        }
+    }
+
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[BufferWrapper.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[/* THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
+*  Microsoft SQL Server Integration Services buffer wrappers
+*  This module defines classes for accessing data flow buffers
+*  THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT! */
+
+
+
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Pipeline;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+
+public class Input0Buffer: ScriptBuffer
+
+{
+    public Input0Buffer(PipelineBuffer Buffer, int[] BufferColumnIndexes, OutputNameMap OutputMap)
+        : base(Buffer, BufferColumnIndexes, OutputMap)
+    {
+    }
+
+    public Byte CRASHDAYOFWEEK
+    {
+        get
+        {
+            return Buffer.GetByte(BufferColumnIndexes[0]);
+        }
+        set
+        {
+            this[0] = value;
+        }
+    }
+    public bool CRASHDAYOFWEEK_IsNull
+    {
+        get
+        {
+            return IsNull(0);
+        }
+        set
+        {
+            if (value)
+            {
+                SetNull(0);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public Byte CRASHMONTH
+    {
+        get
+        {
+            return Buffer.GetByte(BufferColumnIndexes[1]);
+        }
+        set
+        {
+            this[1] = value;
+        }
+    }
+    public bool CRASHMONTH_IsNull
+    {
+        get
+        {
+            return IsNull(1);
+        }
+        set
+        {
+            if (value)
+            {
+                SetNull(1);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public String dayname
+    {
+        set
+        {
+            this[2] = value;
+        }
+    }
+    public bool dayname_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(2);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public String monthname
+    {
+        set
+        {
+            this[3] = value;
+        }
+    }
+    public bool monthname_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(3);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public Byte isweekend
+    {
+        set
+        {
+            this[4] = value;
+        }
+    }
+    public bool isweekend_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(4);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    new public bool NextRow()
+    {
+        return base.NextRow();
+    }
+
+    new public bool EndOfRowset()
+    {
+        return base.EndOfRowset();
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Settings.Designer.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_55491b77048a4b9bb841ce5a8e7b642f.Properties.Settings.get_Default():SC_55491b77048a4b9bb841ce5a8e7b642f.Properties.Sett" +
+    "ings")]
+
+namespace SC_55491b77048a4b9bb841ce5a8e7b642f.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[SC_55491b77048a4b9bb841ce5a8e7b642f.csproj]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A1915021-3070-4C65-ABBC-9F2D5B2BD1EB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SC_55491b77048a4b9bb841ce5a8e7b642f</RootNamespace>
+    <AssemblyName>SC_55491b77048a4b9bb841ce5a8e7b642f</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>
+    <TargetFrameworkProfile></TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.SqlServer.TxScript, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.DTSRuntimeWrap, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.DTSPipelineWrap, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.PipelineHost, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Compile Include="main.cs" />
+    <Compile Include="BufferWrapper.cs" />
+    <Compile Include="ComponentWrapper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <!-- Include the build rules for a C# project.-->
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- This section defines VSTA properties that describe the host-changable project properties. -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}">
+        <ProjectProperties HostName="VSTAHostName" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="cs" TemplatesPath="" />
+        <Host Name="ScriptComponent" IconIndex="0" />
+        <ProjectClient>
+          <HostIdentifier>SSIS_SC160</HostIdentifier>
+        </ProjectClient>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Project]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF16LE]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="4.0" schemaVersion="1.0">
+  <msb:PropertyGroup>
+    <msb:CodeName>SC_55491b77048a4b9bb841ce5a8e7b642f</msb:CodeName>
+    <msb:Language>msBuild</msb:Language>
+    <msb:DisplayName>SC_55491b77048a4b9bb841ce5a8e7b642f</msb:DisplayName>
+    <msb:ProjectId>{FC90BB7B-383B-4419-9CEE-3E57411ADFE9}</msb:ProjectId>
+  </msb:PropertyGroup>
+  <msb:ItemGroup>
+    <msb:Project Include="SC_55491b77048a4b9bb841ce5a8e7b642f.csproj" />
+    <msb:File Include="main.cs" />
+    <msb:File Include="BufferWrapper.cs" />
+    <msb:File Include="ComponentWrapper.cs" />
+    <msb:File Include="Properties\Settings.settings" />
+    <msb:File Include="Properties\AssemblyInfo.cs" />
+    <msb:File Include="Properties\Resources.resx" />
+    <msb:File Include="Properties\Resources.Designer.cs" />
+    <msb:File Include="Properties\Settings.Designer.cs" />
+  </msb:ItemGroup>
+</c:Project>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\AssemblyInfo.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("SC_55491b77048a4b9bb841ce5a8e7b642f")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("SC_55491b77048a4b9bb841ce5a8e7b642f")]
+[assembly: AssemblyCopyright("Copyright @  2025")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.0.0")]
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Settings.settings]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Resources.Designer.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_55491b77048a4b9bb841ce5a8e7b642f.Properties.Resources.get_ResourceManager():System.Resources.Resou" +
+    "rceManager")]
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_55491b77048a4b9bb841ce5a8e7b642f.Properties.Resources.get_Culture():System.Globalization.CultureIn" +
+    "fo")]
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_55491b77048a4b9bb841ce5a8e7b642f.Properties.Resources.set_Culture(System.Globalization.CultureInfo" +
+    "):Void")]
+
+namespace SC_55491b77048a4b9bb841ce5a8e7b642f.Properties {
+    
+    
+    /// <summary>
+    ///   A strongly-typed resource class, for looking up localized strings, etc.
+    /// </summary>
+    // This class was auto-generated by the StronglyTypedResourceBuilder
+    // class via a tool like ResGen or Visual Studio.
+    // To add or remove a member, edit your .ResX file then rerun ResGen
+    // with the /str option, or rebuild your VS project.
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    internal class Resources {
+        
+        private static global::System.Resources.ResourceManager resourceMan;
+        
+        private static global::System.Globalization.CultureInfo resourceCulture;
+        
+        [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
+        internal Resources() {
+        }
+        
+        /// <summary>
+        ///   Returns the cached ResourceManager instance used by this class.
+        /// </summary>
+        [global::System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        internal static global::System.Resources.ResourceManager ResourceManager {
+            get {
+                if ((resourceMan == null)) {
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SC_55491b77048a4b9bb841ce5a8e7b642f.Properties.Resources", typeof(Resources).Assembly);
+                    resourceMan = temp;
+                }
+                return resourceMan;
+            }
+        }
+        
+        /// <summary>
+        ///   Overrides the current thread's CurrentUICulture property for all
+        ///   resource lookups using this strongly typed resource class.
+        /// </summary>
+        [global::System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        internal static global::System.Globalization.CultureInfo Culture {
+            get {
+                return resourceCulture;
+            }
+            set {
+                resourceCulture = value;
+            }
+        }
+    }
+}
+]]></arrayElement>
+                  </arrayElements>
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Stores the binary representation of the component"
+                  isArray="true"
+                  name="BinaryCode"
+                  state="cdata">
+                  <arrayElements
+                    arrayElementCount="2">
+                    <arrayElement
+                      dataType="System.String"><![CDATA[SC_55491b77048a4b9bb841ce5a8e7b642f.dll]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDAKQC7GcAAAAAAAAAAOAAIiALATAAABgAAAAIAAAAAAAA1jYA
+AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACAAAAAAgAAAAAAAAMAYIUAABAA
+ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAIQ2AABPAAAAAEAAAEgEAAAAAAAAAAAAAAAAAAAA
+AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAA3BYAAAAgAAAAGAAAAAIA
+AAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAEgEAAAAQAAAAAYAAAAaAAAAAAAAAAAAAAAAAABAAABA
+LnJlbG9jAAAMAAAAAGAAAAACAAAAIAAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAAC4
+NgAAAAAAAEgAAAACAAUArCMAACASAAABAAAAAAAAAMw1AAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4CKBAAAAoqHgIoEQAACioTMAQAVQEAAAEAABEDbwgAAAY6
+jQAAAB2NGgAAASUWcgEAAHCiJRdyDwAAcKIlGHIdAABwoiUZci0AAHCiJRpyQQAAcKIlG3JTAABw
+oiUccmEAAHCiCgNvBgAABhcyOANvBgAABh0wLwMGA28GAAAGF1mabw4AAAYDA28GAAAGFy4MA28G
+AAAGHS4DFisBF9JvEgAABisYA3JzAABwbw4AAAYrCwNygwAAcG8OAAAGA28MAAAGOpsAAAAfDI0a
+AAABJRZykwAAcKIlF3KjAABwoiUYcrUAAHCiJRlywQAAcKIlGnLNAABwoiUbctUAAHCiJRxy3wAA
+cKIlHXLpAABwoiUecvcAAHCiJR8JcgsBAHCiJR8KchsBAHCiJR8Lci0BAHCiCwNvCgAABhcyGwNv
+CgAABh8MMBEDBwNvCgAABhdZmm8QAAAGKgNycwAAcG8QAAAGKgNygwAAcG8QAAAGKh4CKBYAAAYq
+KgIDBAUoEgAACipSAnsTAAAKAnsUAAAKFpRvFQAACio6AhYDjBsAAAEoFgAACioiAhYoFwAACipa
+AywIAhYoGAAACipyPwEAcHMZAAAKelICexMAAAoCexQAAAoXlG8VAAAKKjoCFwOMGwAAASgWAAAK
+KiICFygXAAAKKloDLAgCFygYAAAKKnI/AQBwcxkAAAp6JgIYAygWAAAKKloDLAgCGCgYAAAKKnI/
+AQBwcxkAAAp6JgIZAygWAAAKKloDLAgCGSgYAAAKKnI/AQBwcxkAAAp6OgIaA4wbAAABKBYAAAoq
+WgMsCAIaKBgAAAoqcj8BAHBzGQAACnoeAigaAAAKKh4CKBsAAAoqfgIoHAAACgICcxoAAAZ9AQAA
+BAICcxsAAAZ9AgAABCqSBHLcAQBwGm8dAAAKLBUCBQIDKB4AAAoOBHMFAAAGbxgAAAYqSisHAgNv
+GQAABgNvFAAABi3xKgYqOgIoHwAACgIDfQMAAAQqOgIoHwAACgIDfQQAAAQqHgIoHwAACiqufgUA
+AAQtHnLsAQBw0AcAAAIoIAAACm8hAAAKcyIAAAqABQAABH4FAAAEKhp+BgAABCoeAoAGAAAEKhp+
+BwAABCoeAigjAAAKKi5zIQAABoAHAAAEKgAAQlNKQgEAAQAAAAAADAAAAHY0LjAuMzAzMTkAAAAA
+BQBsAAAAjAYAACN+AAD4BgAABAcAACNTdHJpbmdzAAAAAPwNAABgAgAAI1VTAFwQAAAQAAAAI0dV
+SUQAAABsEAAAtAEAACNCbG9iAAAAAAAAAAIAAAFXFaIBCQEAAAD6ATMAFgAAAQAAACAAAAAIAAAA
+BwAAACIAAAAXAAAAIwAAABAAAAABAAAAAwAAAA0AAAASAAAAAQAAAAQAAAABAAAAAABeAwEAAAAA
+AAYALAI6BQYAwAI6BQYAeAEnBQ8ArgUAAAYApQF8BAYADwJ8BAYA8AF8BAYApwJ8BAYATAJ8BAYA
+ZQJ8BAYAvAF8BAYA1wEnAwoAgALFAAoA+QTFAA4A6gTFAAoAxQTFAAoAdAbFAAYANwY0BAYAWwEn
+BQYACgVaBQYAuQRnBBIAKwFIAxIAjAFIAxIAEwFSBAYAQAE6BQYAQQM0BAYA+AI0BAYAjgQ0BAYA
+qAQ0BAYA5gA0BAYAfQA0BAYA+QZ8BAAAAAABAAAAAAABAAEAAQAQAEcEAAAQAAEAAQABABAA3QQA
+ADkAAQAFAAEAEABWBgAARQABABYAAQAQACsGAABJAAMAGgABABAA7AUAAEkABAAbAAAAEABhBb0F
+SQAFABwAAAEQABsGvQVhAAcAIAAGACsGfAAGAOwFgAABAGQGhAABAGQGhAARADsEiAARAAMBjAAR
+AG0AkABQIAAAAADGAN4CBgABAFggAAAAAMYA6QIGAAEAYCAAAAAAxgDWBpQAAQDBIQAAAACGGBoF
+BgACAMkhAAAAAIYYGgUiAAIA1CEAAAAAhggwAJoABQDpIQAAAACGCEMAngAFAPghAAAAAIYIsgNE
+AAYAASIAAAAAhgjMA6MABgAYIgAAAACGCBIAmgAHAC0iAAAAAIYIIQCeAAcAPCIAAAAAhgiGA0QA
+CABFIgAAAACGCJwDowAIAFwiAAAAAIYIuQAQAAkAZiIAAAAAhggQBKMACgB9IgAAAACGCKsAEAAL
+AIciAAAAAIYI+wOjAAwAniIAAAAAhghfAJ4ADQCtIgAAAACGCOYDowAOAMQiAAAAAIYA7QZEAA8A
+zCIAAAAAhgA+BkQADwDUIgAAAACGGBoFBgAPAPQiAAAAAMYAyQaoAA8AGSMAAAAAxgHCBpQAEwAs
+IwAAAADGAdYGlAAUAC4jAAAAAIYYGgWyABUAPSMAAAAAhhgaBbIAFgBMIwAAAACDGBoFBgAXAFQj
+AAAAAJMIBgW4ABcAgCMAAAAAkwjrAL0AFwCHIwAAAACTCPcAwgAXAI8jAAAAAJYISgbIABgAliMA
+AAAAhhgaBQYAGACeIwAAAACRGCAFzQAYAAAAAQDxBgAAAQD/BAAAAgD2BQAAAwDTBAAAAQD9AgAA
+AQD9AgAAAQD9AgAAAQD9AgAAAQD9AgAAAQD9AgAAAQD9AgAAAQD9AgAAAQD9AgAAAQD9AgAAAQAK
+AAAAAgChAAAAAwD/BAAABADTBAAAAQD/BAAAAQDxBgAAAQB6BgAAAQB6BgAAAQD9AgkAGgUBABEA
+GgUGABkAGgUKACkAGgUQADEAGgUQADkAGgUQAEEAGgUQAEkAGgUQAFEAGgUQAFkAGgUQAGEAGgUQ
+AGkAGgUGAJkAGgUGALkAGgUVAMkAGgUGAIkA3gIGAIkA6QIGAHEAGgUiAHEA/wQsAHEA9gUwAHkA
+9QI0AHEAKwQ5AHEAHAQ/AHEAIwQBAOEAGgUQAHEA7QZEAHEAPgZEAIkAGgUGANEAJAZIAIkACgZP
+AJEAGgUGAPEAjwBVAPEA9QZcAKEAGgViAMEAGgUGAC4ACwDsAC4AEwD1AC4AGwAUAS4AIwAdAS4A
+KwBGAS4AMwBGAS4AOwBGAS4AQwAdAS4ASwBMAS4AUwBGAS4AWwBjAUMAYwCtAeEAewCtAeMAawCt
+AWkBcwAUAYkBcwAUARsAAwABAAcACwAIAA0AAABHANEAAADQA9UAAAAlANEAAACgA9UAAAC9ANkA
+AAAUBNUAAACvANkAAAD/A9UAAABjANEAAADqA9UAAAAKBd0AAAALAeIAAABOBucAAgAGAAMAAQAH
+AAMAAgAIAAUAAQAJAAUAAgAKAAcAAQALAAcAAgAMAAkAAQANAAkAAQAOAAsAAQAPAA0AAQAQAA8A
+AQARABEAAQASABMAAQATABUAAgAdABcAAgAeABkAAQAfABkAAgAgABsABIAAAAEAAAAAAAAAAAAA
+AAAAAwMAAAQAAAAAAAAAAAAAAGoAVgAAAAAAEAAAAAAAAAAAAAAAcwCEBgAAAAAQAAAAAAAAAAAA
+AABzAKEGAAAAAAQAAAAAAAAAAAAAAGoANAQAAAAAAAAAAAEAAABrBQAAAAAAPE1vZHVsZT4ASW5w
+dXRJRABnZXRfQ1JBU0hNT05USABzZXRfQ1JBU0hNT05USABnZXRfQ1JBU0hEQVlPRldFRUsAc2V0
+X0NSQVNIREFZT0ZXRUVLAG1zY29ybGliAHNldF9pc3dlZWtlbmQAZGVmYXVsdEluc3RhbmNlAFJ1
+bnRpbWVUeXBlSGFuZGxlAEdldFR5cGVGcm9tSGFuZGxlAElucHV0TmFtZQBzZXRfbW9udGhuYW1l
+AHNldF9kYXluYW1lAE1pY3Jvc29mdC5TcWxTZXJ2ZXIuRHRzLlBpcGVsaW5lAFR5cGUAZ2V0X0N1
+bHR1cmUAc2V0X0N1bHR1cmUAcmVzb3VyY2VDdWx0dXJlAEFwcGxpY2F0aW9uU2V0dGluZ3NCYXNl
+AEVkaXRvckJyb3dzYWJsZVN0YXRlAENvbXBpbGVyR2VuZXJhdGVkQXR0cmlidXRlAERlYnVnZ2Vy
+Tm9uVXNlckNvZGVBdHRyaWJ1dGUARGVidWdnYWJsZUF0dHJpYnV0ZQBFZGl0b3JCcm93c2FibGVB
+dHRyaWJ1dGUAQXNzZW1ibHlUaXRsZUF0dHJpYnV0ZQBBc3NlbWJseVRyYWRlbWFya0F0dHJpYnV0
+ZQBUYXJnZXRGcmFtZXdvcmtBdHRyaWJ1dGUAQXNzZW1ibHlDb25maWd1cmF0aW9uQXR0cmlidXRl
+AEFzc2VtYmx5RGVzY3JpcHRpb25BdHRyaWJ1dGUAQ29tcGlsYXRpb25SZWxheGF0aW9uc0F0dHJp
+YnV0ZQBBc3NlbWJseVByb2R1Y3RBdHRyaWJ1dGUAQXNzZW1ibHlDb3B5cmlnaHRBdHRyaWJ1dGUA
+U1NJU1NjcmlwdENvbXBvbmVudEVudHJ5UG9pbnRBdHRyaWJ1dGUAQXNzZW1ibHlDb21wYW55QXR0
+cmlidXRlAFJ1bnRpbWVDb21wYXRpYmlsaXR5QXR0cmlidXRlAFByZUV4ZWN1dGUAUG9zdEV4ZWN1
+dGUAR2V0Qnl0ZQB2YWx1ZQBTQ181NTQ5MWI3NzA0OGE0YjliYjg0MWNlNWE4ZTdiNjQyZgBTeXN0
+ZW0uUnVudGltZS5WZXJzaW9uaW5nAFN0cmluZwBTeXN0ZW0uQ29tcG9uZW50TW9kZWwAU0NfNTU0
+OTFiNzcwNDhhNGI5YmI4NDFjZTVhOGU3YjY0MmYuZGxsAGdldF9DUkFTSE1PTlRIX0lzTnVsbABz
+ZXRfQ1JBU0hNT05USF9Jc051bGwAZ2V0X0NSQVNIREFZT0ZXRUVLX0lzTnVsbABzZXRfQ1JBU0hE
+QVlPRldFRUtfSXNOdWxsAHNldF9pc3dlZWtlbmRfSXNOdWxsAHNldF9tb250aG5hbWVfSXNOdWxs
+AHNldF9kYXluYW1lX0lzTnVsbABTZXROdWxsAHNldF9JdGVtAFN5c3RlbQByZXNvdXJjZU1hbgBT
+Y3JpcHRNYWluAFN5c3RlbS5Db25maWd1cmF0aW9uAFN5c3RlbS5HbG9iYWxpemF0aW9uAFN5c3Rl
+bS5SZWZsZWN0aW9uAEludmFsaWRPcGVyYXRpb25FeGNlcHRpb24AU3RyaW5nQ29tcGFyaXNvbgBD
+dWx0dXJlSW5mbwBPdXRwdXROYW1lTWFwAE91dHB1dE1hcABJbnB1dDBCdWZmZXIAUGlwZWxpbmVC
+dWZmZXIAU2NyaXB0QnVmZmVyAGdldF9SZXNvdXJjZU1hbmFnZXIALmN0b3IALmNjdG9yAFN5c3Rl
+bS5EaWFnbm9zdGljcwBTeXN0ZW0uUnVudGltZS5Db21waWxlclNlcnZpY2VzAFN5c3RlbS5SZXNv
+dXJjZXMAU0NfNTU0OTFiNzcwNDhhNGI5YmI4NDFjZTVhOGU3YjY0MmYuUHJvcGVydGllcy5SZXNv
+dXJjZXMucmVzb3VyY2VzAERlYnVnZ2luZ01vZGVzAFNDXzU1NDkxYjc3MDQ4YTRiOWJiODQxY2U1
+YThlN2I2NDJmLlByb3BlcnRpZXMAVmFyaWFibGVzAEJ1ZmZlckNvbHVtbkluZGV4ZXMAR2V0Q29s
+dW1uSW5kZXhlcwBTZXR0aW5ncwBFcXVhbHMAQ29ubmVjdGlvbnMAT2JqZWN0AEVuZE9mUm93c2V0
+AGdldF9EZWZhdWx0AFVzZXJDb21wb25lbnQAUGFyZW50Q29tcG9uZW50AFNjcmlwdENvbXBvbmVu
+dABNaWNyb3NvZnQuU3FsU2VydmVyLlR4U2NyaXB0AE1pY3Jvc29mdC5TcWxTZXJ2ZXIuUGlwZWxp
+bmVIb3N0AElucHV0MF9Qcm9jZXNzSW5wdXQASW5wdXQwX1Byb2Nlc3NJbnB1dFJvdwBOZXh0Um93
+AGdldF9Bc3NlbWJseQAAAAANUwB1AG4AZABhAHkAAA1NAG8AbgBkAGEAeQAAD1QAdQBlAHMAZABh
+AHkAABNXAGUAZABuAGUAcwBkAGEAeQAAEVQAaAB1AHIAcwBkAGEAeQAADUYAcgBpAGQAYQB5AAAR
+UwBhAHQAdQByAGQAYQB5AAAPSQBuAHYAYQBsAGkAZAAAD1UAbgBrAG4AbwB3AG4AAA9KAGEAbgB1
+AGEAcgB5AAARRgBlAGIAcgB1AGEAcgB5AAALTQBhAHIAYwBoAAALQQBwAHIAaQBsAAAHTQBhAHkA
+AAlKAHUAbgBlAAAJSgB1AGwAeQAADUEAdQBnAHUAcwB0AAATUwBlAHAAdABlAG0AYgBlAHIAAA9P
+AGMAdABvAGIAZQByAAARTgBvAHYAZQBtAGIAZQByAAARRABlAGMAZQBtAGIAZQByAACAm0kAcwBO
+AHUAbABsACAAcAByAG8AcABlAHIAdAB5ACAAYwBhAG4AbgBvAHQAIABiAGUAIABzAGUAdAAgAHQA
+bwAgAEYAYQBsAHMAZQAuACAAQQBzAHMAaQBnAG4AIABhACAAdgBhAGwAdQBlACAAdABvACAAdABo
+AGUAIABjAG8AbAB1AG0AbgAgAGkAbgBzAHQAZQBhAGQALgAAD0kAbgBwAHUAdAAgADAAAHFTAEMA
+XwA1ADUANAA5ADEAYgA3ADcAMAA0ADgAYQA0AGIAOQBiAGIAOAA0ADEAYwBlADUAYQA4AGUANwBi
+ADYANAAyAGYALgBQAHIAbwBwAGUAcgB0AGkAZQBzAC4AUgBlAHMAbwB1AHIAYwBlAHMAAAAAvcgl
+s/8I3k+ni09+H2HwZgAEIAEBCAMgAAEFIAEBEREEIAEBDgUgAQERWQYHAh0OHQ4JIAMBEj0dCBJB
+AwYSPQMGHQgEIAEFCAUgAgEIHAQgAQIIAyAAAgYgAgIOEXUFIAEdCAgGAAESeRF9BSAAEoCBByAC
+AQ4SgIEIt3pcVhk04IkIiYRdzYCAzJEDBhIUAwYSGAMGEkUDBhJRAwYSVQMGEiAFIAEBEgwDIAAF
+BCABAQUEIAEBAgkgBAEIDhI9EkEFIAEBEkUEAAASUQQAABJVBQABARJVBAAAEiADAAABAygABQMo
+AAIDKAAOBAgAElEECAASVQQIABIgCAEACAAAAAAAHgEAAQBUAhZXcmFwTm9uRXhjZXB0aW9uVGhy
+b3dzAQgBAAIAAAAAACgBACNTQ181NTQ5MWI3NzA0OGE0YjliYjg0MWNlNWE4ZTdiNjQyZgAABQEA
+AAAAFgEAEUNvcHlyaWdodCBAICAyMDI1AABJAQAaLk5FVEZyYW1ld29yayxWZXJzaW9uPXY0LjcB
+AFQOFEZyYW1ld29ya0Rpc3BsYXlOYW1lEi5ORVQgRnJhbWV3b3JrIDQuNwQBAAAAAAC0AAAAzsrv
+vgEAAACRAAAAbFN5c3RlbS5SZXNvdXJjZXMuUmVzb3VyY2VSZWFkZXIsIG1zY29ybGliLCBWZXJz
+aW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0
+ZTA4OSNTeXN0ZW0uUmVzb3VyY2VzLlJ1bnRpbWVSZXNvdXJjZVNldAIAAAAAAAAAAAAAAFBBRFBB
+RFC0AAAArDYAAAAAAAAAAAAAxjYAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAALg2AAAAAAAAAAAA
+AAAAX0NvckRsbE1haW4AbXNjb3JlZS5kbGwAAAAAAP8lACAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAEAEAAAABgAAIAAAAAAAAAAAAAAAAAAAAEAAQAAADAAAIAAAAAAAAAAAAAAAAAAAAEAAAAAAEgA
+AABYQAAA7AMAAAAAAAAAAAAA7AM0AAAAVgBTAF8AVgBFAFIAUwBJAE8ATgBfAEkATgBGAE8AAAAA
+AL0E7/4AAAEAAAABAAAAAAAAAAEAAAAAAD8AAAAAAAAABAAAAAIAAAAAAAAAAAAAAAAAAABEAAAA
+AQBWAGEAcgBGAGkAbABlAEkAbgBmAG8AAAAAACQABAAAAFQAcgBhAG4AcwBsAGEAdABpAG8AbgAA
+AAAAAACwBEwDAAABAFMAdAByAGkAbgBnAEYAaQBsAGUASQBuAGYAbwAAACgDAAABADAAMAAwADAA
+MAA0AGIAMAAAABoAAQABAEMAbwBtAG0AZQBuAHQAcwAAAAAAAAAiAAEAAQBDAG8AbQBwAGEAbgB5
+AE4AYQBtAGUAAAAAAAAAAABwACQAAQBGAGkAbABlAEQAZQBzAGMAcgBpAHAAdABpAG8AbgAAAAAA
+UwBDAF8ANQA1ADQAOQAxAGIANwA3ADAANAA4AGEANABiADkAYgBiADgANAAxAGMAZQA1AGEAOABl
+ADcAYgA2ADQAMgBmAAAAMAAIAAEARgBpAGwAZQBWAGUAcgBzAGkAbwBuAAAAAAAxAC4AMAAuADAA
+LgAwAAAAcAAoAAEASQBuAHQAZQByAG4AYQBsAE4AYQBtAGUAAABTAEMAXwA1ADUANAA5ADEAYgA3
+ADcAMAA0ADgAYQA0AGIAOQBiAGIAOAA0ADEAYwBlADUAYQA4AGUANwBiADYANAAyAGYALgBkAGwA
+bAAAAEgAEgABAEwAZQBnAGEAbABDAG8AcAB5AHIAaQBnAGgAdAAAAEMAbwBwAHkAcgBpAGcAaAB0
+ACAAQAAgACAAMgAwADIANQAAACoAAQABAEwAZQBnAGEAbABUAHIAYQBkAGUAbQBhAHIAawBzAAAA
+AAAAAAAAeAAoAAEATwByAGkAZwBpAG4AYQBsAEYAaQBsAGUAbgBhAG0AZQAAAFMAQwBfADUANQA0
+ADkAMQBiADcANwAwADQAOABhADQAYgA5AGIAYgA4ADQAMQBjAGUANQBhADgAZQA3AGIANgA0ADIA
+ZgAuAGQAbABsAAAAaAAkAAEAUAByAG8AZAB1AGMAdABOAGEAbQBlAAAAAABTAEMAXwA1ADUANAA5
+ADEAYgA3ADcAMAA0ADgAYQA0AGIAOQBiAGIAOAA0ADEAYwBlADUAYQA4AGUANwBiADYANAAyAGYA
+AAA0AAgAAQBQAHIAbwBkAHUAYwB0AFYAZQByAHMAaQBvAG4AAAAxAC4AMAAuADAALgAwAAAAOAAI
+AAEAQQBzAHMAZQBtAGIAbAB5ACAAVgBlAHIAcwBpAG8AbgAAADEALgAwAC4AMAAuADAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAAADAAAANg2AAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
+                  </arrayElements>
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the Microsoft Visual Studio Tools for Applications project. Project names must be unique within a package."
+                  name="VSTAProjectName"
+                  typeConverter="NOTBROWSABLE">SC_55491b77048a4b9bb841ce5a8e7b642f</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the programming language used by the script."
+                  name="ScriptLanguage"
+                  typeConverter="Microsoft.SqlServer.VSTAHosting.ScriptingLanguages">CSharp</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a comma-separated list of read-only variables."
+                  name="ReadOnlyVariables"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ScriptUIVariablePickerDlg"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a comma-separated list of read/write variables."
+                  name="ReadWriteVariables"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ScriptUIWriteableVariablePickerDlg"></property>
+                <property
+                  dataType="System.String"
+                  description="List of breakpoints present on the script."
+                  isArray="true"
+                  name="BreakpointCollection"
+                  typeConverter="NOTBROWSABLE">
+                  <arrayElements
+                    arrayElementCount="0" />
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Checksum to match component metedata against compiled codes."
+                  name="MetadataChecksum140"
+                  typeConverter="NOTBROWSABLE">10</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ScriptComponentHost</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Script Component.Inputs[Input 0]"
+                  hasSideEffects="true"
+                  name="Input 0">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Script Component.Inputs[Input 0].Columns[CRASHDAYOFWEEK]"
+                      cachedDataType="ui1"
+                      cachedName="CRASH_DAY_OF_WEEK"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row].Columns[CRASH_DAY_OF_WEEK]"
+                      name="CRASHDAYOFWEEK"
+                      usageType="readWrite" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Script Component.Inputs[Input 0].Columns[CRASHMONTH]"
+                      cachedDataType="ui1"
+                      cachedName="CRASH_MONTH"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row].Columns[CRASH_MONTH]"
+                      name="CRASHMONTH"
+                      usageType="readWrite" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Script Component.Outputs[Output 0]"
+                  name="Output 0"
+                  synchronousInputId="Package\Data Flow Task\Script Component.Inputs[Input 0]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[dayname]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[dayname]"
+                      name="dayname" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[monthname]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[monthname]"
+                      name="monthname" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[isweekend]"
+                      dataType="ui1"
+                      lineageId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[isweekend]"
+                      name="isweekend" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\XML Source"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Extracts data from an XML file. For example, extract catalog data from an XML file that represents catalogs and catalog items. Before using, specify the schema and generate an output for each XML element.;Microsoft Corporation;Microsoft SQL Server; Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Extracts data from an XML file. For example, extract catalog data from an XML file that represents catalogs and catalog items. Before using, specify the schema and generate an output for each XML element."
+              name="XML Source"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.XmlSourceAdapter</property>
+                <property
+                  dataType="System.String"
+                  description="The XML data used by the XML source adapter."
+                  expressionType="Notify"
+                  name="XMLData">D:\ITI_DE\GP\chicago\formatted_crashes.xml</property>
+                <property
+                  dataType="System.String"
+                  description="The variable used by the XML source adapter to specify XML data."
+                  name="XMLDataVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Defines how the XML source adapter gets XML data."
+                  name="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The XML schema definition used by the XML source adapter."
+                  expressionType="Notify"
+                  name="XMLSchemaDefinition">D:\ITI_DE\GP\chicago\formatted_crashes.xsd</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Identifies whether or not to use inline schema."
+                  name="UseInlineSchema">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Defines how XML integer types are mapped."
+                  name="XMLIntegerMapping"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.XmlSourceAdapter+XMLIntegerMappingConverter">0</property>
+              </properties>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\XML Source.Outputs[row]"
+                  name="row">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Identifies the rowset associated with the output."
+                      name="RowsetID">row</property>
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row].Columns[CRASH_RECORD_ID]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\XML Source.Outputs[row].ExternalColumns[CRASH_RECORD_ID]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row].Columns[CRASH_RECORD_ID]"
+                      name="CRASH_RECORD_ID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row].Columns[CRASH_DATE]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\XML Source.Outputs[row].ExternalColumns[CRASH_DATE]"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row].Columns[CRASH_DATE]"
+                      name="CRASH_DATE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row].Columns[POSTED_SPEED_LIMIT]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\XML Source.Outputs[row].ExternalColumns[POSTED_SPEED_LIMIT]"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row].Columns[POSTED_SPEED_LIMIT]"
+                      name="POSTED_SPEED_LIMIT"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row].Columns[TRAFFIC_CONTROL_DEVICE]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\XML Source.Outputs[row].ExternalColumns[TRAFFIC_CONTROL_DEVICE]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row].Columns[TRAFFIC_CONTROL_DEVICE]"
+                      name="TRAFFIC_CONTROL_DEVICE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row].Columns[DEVICE_CONDITION]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\XML Source.Outputs[row].ExternalColumns[DEVICE_CONDITION]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row].Columns[DEVICE_CONDITION]"
+                      name="DEVICE_CONDITION"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row].Columns[WEATHER_CONDITION]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\XML Source.Outputs[row].ExternalColumns[WEATHER_CONDITION]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row].Columns[WEATHER_CONDITION]"
+                      name="WEATHER_CONDITION"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row].Columns[LIGHTING_CONDITION]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\XML Source.Outputs[row].ExternalColumns[LIGHTING_CONDITION]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row].Columns[LIGHTING_CONDITION]"
+                      name="LIGHTING_CONDITION"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row].Columns[FIRST_CRASH_TYPE]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\XML Source.Outputs[row].ExternalColumns[FIRST_CRASH_TYPE]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row].Columns[FIRST_CRASH_TYPE]"
+                      name="FIRST_CRASH_TYPE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row].Columns[TRAFFICWAY_TYPE]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\XML Source.Outputs[row].ExternalColumns[TRAFFICWAY_TYPE]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row].Columns[TRAFFICWAY_TYPE]"
+                      name="TRAFFICWAY_TYPE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row].Columns[ALIGNMENT]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\XML Source.Outputs[row].ExternalColumns[ALIGNMENT]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row].Columns[ALIGNMENT]"
+                      name="ALIGNMENT"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row].Columns[ROADWAY_SURFACE_COND]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\XML Source.Outputs[row].ExternalColumns[ROADWAY_SURFACE_COND]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row].Columns[ROADWAY_SURFACE_COND]"
+                      name="ROADWAY_SURFACE_COND"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row].Columns[ROAD_DEFECT]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\XML Source.Outputs[row].ExternalColumns[ROAD_DEFECT]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row].Columns[ROAD_DEFECT]"
+                      name="ROAD_DEFECT"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row].Columns[CRASH_TYPE]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\XML Source.Outputs[row].ExternalColumns[CRASH_TYPE]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row].Columns[CRASH_TYPE]"
+                      name="CRASH_TYPE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row].Columns[DAMAGE]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\XML Source.Outputs[row].ExternalColumns[DAMAGE]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row].Columns[DAMAGE]"
+                      name="DAMAGE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row].Columns[PRIM_CONTRIBUTORY_CAUSE]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\XML Source.Outputs[row].ExternalColumns[PRIM_CONTRIBUTORY_CAUSE]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row].Columns[PRIM_CONTRIBUTORY_CAUSE]"
+                      name="PRIM_CONTRIBUTORY_CAUSE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row].Columns[SEC_CONTRIBUTORY_CAUSE]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\XML Source.Outputs[row].ExternalColumns[SEC_CONTRIBUTORY_CAUSE]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row].Columns[SEC_CONTRIBUTORY_CAUSE]"
+                      name="SEC_CONTRIBUTORY_CAUSE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row].Columns[NUM_UNITS]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\XML Source.Outputs[row].ExternalColumns[NUM_UNITS]"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row].Columns[NUM_UNITS]"
+                      name="NUM_UNITS"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row].Columns[MOST_SEVERE_INJURY]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\XML Source.Outputs[row].ExternalColumns[MOST_SEVERE_INJURY]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row].Columns[MOST_SEVERE_INJURY]"
+                      name="MOST_SEVERE_INJURY"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row].Columns[INJURIES_TOTAL]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\XML Source.Outputs[row].ExternalColumns[INJURIES_TOTAL]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row].Columns[INJURIES_TOTAL]"
+                      name="INJURIES_TOTAL"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row].Columns[INJURIES_FATAL]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\XML Source.Outputs[row].ExternalColumns[INJURIES_FATAL]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row].Columns[INJURIES_FATAL]"
+                      name="INJURIES_FATAL"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row].Columns[CRASH_HOUR]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\XML Source.Outputs[row].ExternalColumns[CRASH_HOUR]"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row].Columns[CRASH_HOUR]"
+                      name="CRASH_HOUR"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row].Columns[CRASH_DAY_OF_WEEK]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\XML Source.Outputs[row].ExternalColumns[CRASH_DAY_OF_WEEK]"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row].Columns[CRASH_DAY_OF_WEEK]"
+                      name="CRASH_DAY_OF_WEEK"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row].Columns[CRASH_MONTH]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\XML Source.Outputs[row].ExternalColumns[CRASH_MONTH]"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row].Columns[CRASH_MONTH]"
+                      name="CRASH_MONTH"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row].Columns[LATITUDE]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\XML Source.Outputs[row].ExternalColumns[LATITUDE]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row].Columns[LATITUDE]"
+                      name="LATITUDE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row].Columns[LONGITUDE]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\XML Source.Outputs[row].ExternalColumns[LONGITUDE]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row].Columns[LONGITUDE]"
+                      name="LONGITUDE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row].Columns[CRASH_YEAR]"
+                      dataType="ui2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\XML Source.Outputs[row].ExternalColumns[CRASH_YEAR]"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row].Columns[CRASH_YEAR]"
+                      name="CRASH_YEAR"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row].ExternalColumns[CRASH_RECORD_ID]"
+                      dataType="wstr"
+                      length="255"
+                      name="CRASH_RECORD_ID">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.String</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row].ExternalColumns[CRASH_DATE]"
+                      dataType="wstr"
+                      length="255"
+                      name="CRASH_DATE">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.String</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row].ExternalColumns[POSTED_SPEED_LIMIT]"
+                      dataType="ui1"
+                      name="POSTED_SPEED_LIMIT">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.Byte</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row].ExternalColumns[TRAFFIC_CONTROL_DEVICE]"
+                      dataType="wstr"
+                      length="255"
+                      name="TRAFFIC_CONTROL_DEVICE">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.String</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row].ExternalColumns[DEVICE_CONDITION]"
+                      dataType="wstr"
+                      length="255"
+                      name="DEVICE_CONDITION">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.String</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row].ExternalColumns[WEATHER_CONDITION]"
+                      dataType="wstr"
+                      length="255"
+                      name="WEATHER_CONDITION">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.String</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row].ExternalColumns[LIGHTING_CONDITION]"
+                      dataType="wstr"
+                      length="255"
+                      name="LIGHTING_CONDITION">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.String</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row].ExternalColumns[FIRST_CRASH_TYPE]"
+                      dataType="wstr"
+                      length="255"
+                      name="FIRST_CRASH_TYPE">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.String</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row].ExternalColumns[TRAFFICWAY_TYPE]"
+                      dataType="wstr"
+                      length="255"
+                      name="TRAFFICWAY_TYPE">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.String</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row].ExternalColumns[ALIGNMENT]"
+                      dataType="wstr"
+                      length="255"
+                      name="ALIGNMENT">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.String</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row].ExternalColumns[ROADWAY_SURFACE_COND]"
+                      dataType="wstr"
+                      length="255"
+                      name="ROADWAY_SURFACE_COND">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.String</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row].ExternalColumns[ROAD_DEFECT]"
+                      dataType="wstr"
+                      length="255"
+                      name="ROAD_DEFECT">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.String</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row].ExternalColumns[CRASH_TYPE]"
+                      dataType="wstr"
+                      length="255"
+                      name="CRASH_TYPE">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.String</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row].ExternalColumns[DAMAGE]"
+                      dataType="wstr"
+                      length="255"
+                      name="DAMAGE">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.String</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row].ExternalColumns[PRIM_CONTRIBUTORY_CAUSE]"
+                      dataType="wstr"
+                      length="255"
+                      name="PRIM_CONTRIBUTORY_CAUSE">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.String</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row].ExternalColumns[SEC_CONTRIBUTORY_CAUSE]"
+                      dataType="wstr"
+                      length="255"
+                      name="SEC_CONTRIBUTORY_CAUSE">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.String</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row].ExternalColumns[NUM_UNITS]"
+                      dataType="ui1"
+                      name="NUM_UNITS">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.Byte</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row].ExternalColumns[MOST_SEVERE_INJURY]"
+                      dataType="wstr"
+                      length="255"
+                      name="MOST_SEVERE_INJURY">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.String</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row].ExternalColumns[INJURIES_TOTAL]"
+                      dataType="wstr"
+                      length="255"
+                      name="INJURIES_TOTAL">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.String</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row].ExternalColumns[INJURIES_FATAL]"
+                      dataType="wstr"
+                      length="255"
+                      name="INJURIES_FATAL">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.String</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row].ExternalColumns[CRASH_HOUR]"
+                      dataType="ui1"
+                      name="CRASH_HOUR">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.Byte</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row].ExternalColumns[CRASH_DAY_OF_WEEK]"
+                      dataType="ui1"
+                      name="CRASH_DAY_OF_WEEK">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.Byte</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row].ExternalColumns[CRASH_MONTH]"
+                      dataType="ui1"
+                      name="CRASH_MONTH">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.Byte</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row].ExternalColumns[LATITUDE]"
+                      dataType="wstr"
+                      length="255"
+                      name="LATITUDE">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.String</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row].ExternalColumns[LONGITUDE]"
+                      dataType="wstr"
+                      length="255"
+                      name="LONGITUDE">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.String</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row].ExternalColumns[CRASH_YEAR]"
+                      dataType="ui2"
+                      name="CRASH_YEAR">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.UInt16</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\XML Source.Outputs[row Error Output]"
+                  isErrorOut="true"
+                  name="row Error Output">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Identifies the rowset associated with the output."
+                      name="RowsetID">row</property>
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row Error Output].Columns[CRASH_RECORD_ID]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Data Flow Task\XML Source.Outputs[row Error Output].ExternalColumns[CRASH_RECORD_ID]"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row Error Output].Columns[CRASH_RECORD_ID]"
+                      name="CRASH_RECORD_ID" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row Error Output].Columns[CRASH_DATE]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Data Flow Task\XML Source.Outputs[row Error Output].ExternalColumns[CRASH_DATE]"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row Error Output].Columns[CRASH_DATE]"
+                      name="CRASH_DATE" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row Error Output].Columns[POSTED_SPEED_LIMIT]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Data Flow Task\XML Source.Outputs[row Error Output].ExternalColumns[POSTED_SPEED_LIMIT]"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row Error Output].Columns[POSTED_SPEED_LIMIT]"
+                      name="POSTED_SPEED_LIMIT" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row Error Output].Columns[TRAFFIC_CONTROL_DEVICE]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Data Flow Task\XML Source.Outputs[row Error Output].ExternalColumns[TRAFFIC_CONTROL_DEVICE]"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row Error Output].Columns[TRAFFIC_CONTROL_DEVICE]"
+                      name="TRAFFIC_CONTROL_DEVICE" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row Error Output].Columns[DEVICE_CONDITION]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Data Flow Task\XML Source.Outputs[row Error Output].ExternalColumns[DEVICE_CONDITION]"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row Error Output].Columns[DEVICE_CONDITION]"
+                      name="DEVICE_CONDITION" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row Error Output].Columns[WEATHER_CONDITION]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Data Flow Task\XML Source.Outputs[row Error Output].ExternalColumns[WEATHER_CONDITION]"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row Error Output].Columns[WEATHER_CONDITION]"
+                      name="WEATHER_CONDITION" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row Error Output].Columns[LIGHTING_CONDITION]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Data Flow Task\XML Source.Outputs[row Error Output].ExternalColumns[LIGHTING_CONDITION]"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row Error Output].Columns[LIGHTING_CONDITION]"
+                      name="LIGHTING_CONDITION" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row Error Output].Columns[FIRST_CRASH_TYPE]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Data Flow Task\XML Source.Outputs[row Error Output].ExternalColumns[FIRST_CRASH_TYPE]"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row Error Output].Columns[FIRST_CRASH_TYPE]"
+                      name="FIRST_CRASH_TYPE" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row Error Output].Columns[TRAFFICWAY_TYPE]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Data Flow Task\XML Source.Outputs[row Error Output].ExternalColumns[TRAFFICWAY_TYPE]"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row Error Output].Columns[TRAFFICWAY_TYPE]"
+                      name="TRAFFICWAY_TYPE" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row Error Output].Columns[ALIGNMENT]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Data Flow Task\XML Source.Outputs[row Error Output].ExternalColumns[ALIGNMENT]"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row Error Output].Columns[ALIGNMENT]"
+                      name="ALIGNMENT" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row Error Output].Columns[ROADWAY_SURFACE_COND]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Data Flow Task\XML Source.Outputs[row Error Output].ExternalColumns[ROADWAY_SURFACE_COND]"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row Error Output].Columns[ROADWAY_SURFACE_COND]"
+                      name="ROADWAY_SURFACE_COND" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row Error Output].Columns[ROAD_DEFECT]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Data Flow Task\XML Source.Outputs[row Error Output].ExternalColumns[ROAD_DEFECT]"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row Error Output].Columns[ROAD_DEFECT]"
+                      name="ROAD_DEFECT" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row Error Output].Columns[CRASH_TYPE]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Data Flow Task\XML Source.Outputs[row Error Output].ExternalColumns[CRASH_TYPE]"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row Error Output].Columns[CRASH_TYPE]"
+                      name="CRASH_TYPE" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row Error Output].Columns[DAMAGE]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Data Flow Task\XML Source.Outputs[row Error Output].ExternalColumns[DAMAGE]"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row Error Output].Columns[DAMAGE]"
+                      name="DAMAGE" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row Error Output].Columns[PRIM_CONTRIBUTORY_CAUSE]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Data Flow Task\XML Source.Outputs[row Error Output].ExternalColumns[PRIM_CONTRIBUTORY_CAUSE]"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row Error Output].Columns[PRIM_CONTRIBUTORY_CAUSE]"
+                      name="PRIM_CONTRIBUTORY_CAUSE" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row Error Output].Columns[SEC_CONTRIBUTORY_CAUSE]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Data Flow Task\XML Source.Outputs[row Error Output].ExternalColumns[SEC_CONTRIBUTORY_CAUSE]"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row Error Output].Columns[SEC_CONTRIBUTORY_CAUSE]"
+                      name="SEC_CONTRIBUTORY_CAUSE" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row Error Output].Columns[NUM_UNITS]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Data Flow Task\XML Source.Outputs[row Error Output].ExternalColumns[NUM_UNITS]"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row Error Output].Columns[NUM_UNITS]"
+                      name="NUM_UNITS" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row Error Output].Columns[MOST_SEVERE_INJURY]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Data Flow Task\XML Source.Outputs[row Error Output].ExternalColumns[MOST_SEVERE_INJURY]"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row Error Output].Columns[MOST_SEVERE_INJURY]"
+                      name="MOST_SEVERE_INJURY" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row Error Output].Columns[INJURIES_TOTAL]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Data Flow Task\XML Source.Outputs[row Error Output].ExternalColumns[INJURIES_TOTAL]"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row Error Output].Columns[INJURIES_TOTAL]"
+                      name="INJURIES_TOTAL" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row Error Output].Columns[INJURIES_FATAL]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Data Flow Task\XML Source.Outputs[row Error Output].ExternalColumns[INJURIES_FATAL]"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row Error Output].Columns[INJURIES_FATAL]"
+                      name="INJURIES_FATAL" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row Error Output].Columns[CRASH_HOUR]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Data Flow Task\XML Source.Outputs[row Error Output].ExternalColumns[CRASH_HOUR]"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row Error Output].Columns[CRASH_HOUR]"
+                      name="CRASH_HOUR" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row Error Output].Columns[CRASH_DAY_OF_WEEK]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Data Flow Task\XML Source.Outputs[row Error Output].ExternalColumns[CRASH_DAY_OF_WEEK]"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row Error Output].Columns[CRASH_DAY_OF_WEEK]"
+                      name="CRASH_DAY_OF_WEEK" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row Error Output].Columns[CRASH_MONTH]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Data Flow Task\XML Source.Outputs[row Error Output].ExternalColumns[CRASH_MONTH]"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row Error Output].Columns[CRASH_MONTH]"
+                      name="CRASH_MONTH" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row Error Output].Columns[LATITUDE]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Data Flow Task\XML Source.Outputs[row Error Output].ExternalColumns[LATITUDE]"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row Error Output].Columns[LATITUDE]"
+                      name="LATITUDE" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row Error Output].Columns[LONGITUDE]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Data Flow Task\XML Source.Outputs[row Error Output].ExternalColumns[LONGITUDE]"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row Error Output].Columns[LONGITUDE]"
+                      name="LONGITUDE" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row Error Output].Columns[CRASH_YEAR]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Data Flow Task\XML Source.Outputs[row Error Output].ExternalColumns[CRASH_YEAR]"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row Error Output].Columns[CRASH_YEAR]"
+                      name="CRASH_YEAR" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\XML Source.Outputs[row Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row Error Output].ExternalColumns[CRASH_RECORD_ID]"
+                      dataType="nText"
+                      name="CRASH_RECORD_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row Error Output].ExternalColumns[CRASH_DATE]"
+                      dataType="nText"
+                      name="CRASH_DATE" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row Error Output].ExternalColumns[POSTED_SPEED_LIMIT]"
+                      dataType="nText"
+                      name="POSTED_SPEED_LIMIT" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row Error Output].ExternalColumns[TRAFFIC_CONTROL_DEVICE]"
+                      dataType="nText"
+                      name="TRAFFIC_CONTROL_DEVICE" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row Error Output].ExternalColumns[DEVICE_CONDITION]"
+                      dataType="nText"
+                      name="DEVICE_CONDITION" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row Error Output].ExternalColumns[WEATHER_CONDITION]"
+                      dataType="nText"
+                      name="WEATHER_CONDITION" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row Error Output].ExternalColumns[LIGHTING_CONDITION]"
+                      dataType="nText"
+                      name="LIGHTING_CONDITION" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row Error Output].ExternalColumns[FIRST_CRASH_TYPE]"
+                      dataType="nText"
+                      name="FIRST_CRASH_TYPE" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row Error Output].ExternalColumns[TRAFFICWAY_TYPE]"
+                      dataType="nText"
+                      name="TRAFFICWAY_TYPE" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row Error Output].ExternalColumns[ALIGNMENT]"
+                      dataType="nText"
+                      name="ALIGNMENT" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row Error Output].ExternalColumns[ROADWAY_SURFACE_COND]"
+                      dataType="nText"
+                      name="ROADWAY_SURFACE_COND" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row Error Output].ExternalColumns[ROAD_DEFECT]"
+                      dataType="nText"
+                      name="ROAD_DEFECT" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row Error Output].ExternalColumns[CRASH_TYPE]"
+                      dataType="nText"
+                      name="CRASH_TYPE" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row Error Output].ExternalColumns[DAMAGE]"
+                      dataType="nText"
+                      name="DAMAGE" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row Error Output].ExternalColumns[PRIM_CONTRIBUTORY_CAUSE]"
+                      dataType="nText"
+                      name="PRIM_CONTRIBUTORY_CAUSE" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row Error Output].ExternalColumns[SEC_CONTRIBUTORY_CAUSE]"
+                      dataType="nText"
+                      name="SEC_CONTRIBUTORY_CAUSE" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row Error Output].ExternalColumns[NUM_UNITS]"
+                      dataType="nText"
+                      name="NUM_UNITS" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row Error Output].ExternalColumns[MOST_SEVERE_INJURY]"
+                      dataType="nText"
+                      name="MOST_SEVERE_INJURY" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row Error Output].ExternalColumns[INJURIES_TOTAL]"
+                      dataType="nText"
+                      name="INJURIES_TOTAL" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row Error Output].ExternalColumns[INJURIES_FATAL]"
+                      dataType="nText"
+                      name="INJURIES_FATAL" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row Error Output].ExternalColumns[CRASH_HOUR]"
+                      dataType="nText"
+                      name="CRASH_HOUR" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row Error Output].ExternalColumns[CRASH_DAY_OF_WEEK]"
+                      dataType="nText"
+                      name="CRASH_DAY_OF_WEEK" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row Error Output].ExternalColumns[CRASH_MONTH]"
+                      dataType="nText"
+                      name="CRASH_MONTH" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row Error Output].ExternalColumns[LATITUDE]"
+                      dataType="nText"
+                      name="LATITUDE" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row Error Output].ExternalColumns[LONGITUDE]"
+                      dataType="nText"
+                      name="LONGITUDE" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\XML Source.Outputs[row Error Output].ExternalColumns[CRASH_YEAR]"
+                      dataType="nText"
+                      name="CRASH_YEAR" />
+                  </externalMetadataColumns>
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task.Paths[Derived Column Output]"
+              endId="Package\Data Flow Task\Multicast.Inputs[Multicast Input 1]"
+              name="Derived Column Output"
+              startId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Derived Column Output1]"
+              endId="Package\Data Flow Task\Script Component.Inputs[Input 0]"
+              name="Derived Column Output"
+              startId="Package\Data Flow Task\Derived-SSC.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Multicast Output 1]"
+              endId="Package\Data Flow Task\Dim Damage Destination.Inputs[OLE DB Destination Input]"
+              name="Multicast Output 1"
+              startId="Package\Data Flow Task\Multicast.Outputs[Multicast Output 1]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Multicast Output 2]"
+              endId="Package\Data Flow Task\Dim_Road Destination.Inputs[OLE DB Destination Input]"
+              name="Multicast Output 2"
+              startId="Package\Data Flow Task\Multicast.Outputs[Multicast Output 2]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Multicast Output 3]"
+              endId="Package\Data Flow Task\Dim_Surrounding_Conditions Destination.Inputs[OLE DB Destination Input]"
+              name="Multicast Output 3"
+              startId="Package\Data Flow Task\Multicast.Outputs[Multicast Output 3]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Multicast Output 4]"
+              endId="Package\Data Flow Task\Dim_Traffic_Control Destination.Inputs[OLE DB Destination Input]"
+              name="Multicast Output 4"
+              startId="Package\Data Flow Task\Multicast.Outputs[Multicast Output 4]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Output 0]"
+              endId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]"
+              name="Output 0"
+              startId="Package\Data Flow Task\Script Component.Outputs[Output 0]" />
+            <path
+              refId="Package\Data Flow Task.Paths[row]"
+              endId="Package\Data Flow Task\Derived-SSC.Inputs[Derived Column Input]"
+              name="row"
+              startId="Package\Data Flow Task\XML Source.Outputs[row]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="150.4,41.6"
+          Id="Package\Data Flow Task"
+          TopLeft="345.000000734415,102.470588145474" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="133.6,41.6"
+          Id="Package\Data Flow Task\XML Source"
+          TopLeft="303.828572070234,18.3529411603835" />
+        <NodeLayout
+          Size="183.2,41.6"
+          Id="Package\Data Flow Task\Dim_Road Destination"
+          TopLeft="375.714286322496,404.423529522363" />
+        <NodeLayout
+          Size="228.8,41.6"
+          Id="Package\Data Flow Task\Dim_Traffic_Control Destination"
+          TopLeft="577.942858179857,408.458823458361" />
+        <NodeLayout
+          Size="195.2,41.6"
+          Id="Package\Data Flow Task\Dim Damage Destination"
+          TopLeft="32.1428570196943,401.470588259425" />
+        <NodeLayout
+          Size="120,41.6"
+          Id="Package\Data Flow Task\Multicast"
+          TopLeft="315.000000670552,328.823529123538" />
+        <NodeLayout
+          Size="136.8,41.6"
+          Id="Package\Data Flow Task\Derived-SSC"
+          TopLeft="303.571429217653,87.6470587712464" />
+        <NodeLayout
+          Size="271.2,41.6"
+          Id="Package\Data Flow Task\Dim_Surrounding_Conditions Destination"
+          TopLeft="185.00000020223,467.023529556548" />
+        <NodeLayout
+          Size="152.8,41.6"
+          Id="Package\Data Flow Task\Derived Column"
+          TopLeft="295.000000500253,250.694117599468" />
+        <NodeLayout
+          Size="162.4,41.6"
+          Id="Package\Data Flow Task\Script Component"
+          TopLeft="289.285714901527,168.282352809799" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[row]"
+          TopLeft="371.300000643943,59.9529411603835">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,27.6941176108629"
+              Start="0,0"
+              End="0,20.1941176108629">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.1941176108629" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Output 0]"
+          TopLeft="370.94285770089,209.882352809799">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,40.811764789669"
+              Start="0,0"
+              End="0,33.311764789669">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.311764789669" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Multicast Output 4]"
+          TopLeft="408.600000670552,370.423529123538">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="283.742857509304,38.0352943348224"
+              Start="0,0"
+              End="283.742857509304,30.5352943348224">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,7.62189549119574" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,7.62189549119574"
+                    Point2="0,11.6218954911957"
+                    Point3="4,11.6218954911957" />
+                  <mssgle:LineSegment
+                    End="279.742857509304,11.6218954911957" />
+                  <mssgle:CubicBezierSegment
+                    Point1="279.742857509304,11.6218954911957"
+                    Point2="283.742857509304,11.6218954911957"
+                    Point3="283.742857509304,15.6218954911957" />
+                  <mssgle:LineSegment
+                    End="283.742857509304,30.5352943348224" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Multicast Output 3]"
+          TopLeft="363.800000670552,370.423529123538">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-43.2000004683221,96.6000004330102"
+              Start="0,0"
+              End="-43.2000004683221,89.1000004330102">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,39.3279413706884" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,39.3279413706884"
+                    Point2="0,43.3279413706884"
+                    Point3="-4,43.3279413706884" />
+                  <mssgle:LineSegment
+                    End="-39.2000004683221,43.3279413706884" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-39.2000004683221,43.3279413706884"
+                    Point2="-43.2000004683221,43.3279413706884"
+                    Point3="-43.2000004683221,47.3279413706884" />
+                  <mssgle:LineSegment
+                    End="-43.2000004683221,89.1000004330102" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Multicast Output 2]"
+          TopLeft="386.200000670552,370.423529123538">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="81.114285651944,34.000000398825"
+              Start="0,0"
+              End="81.114285651944,26.500000398825">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,11.2500001788847" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,11.2500001788847"
+                    Point2="0,15.2500001788847"
+                    Point3="4,15.2500001788847" />
+                  <mssgle:LineSegment
+                    End="77.114285651944,15.2500001788847" />
+                  <mssgle:CubicBezierSegment
+                    Point1="77.114285651944,15.2500001788847"
+                    Point2="81.114285651944,15.2500001788847"
+                    Point3="81.114285651944,19.2500001788847" />
+                  <mssgle:LineSegment
+                    End="81.114285651944,26.500000398825" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Multicast Output 1]"
+          TopLeft="356.333334003886,370.423529123538">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-226.590476984191,31.0470591358866"
+              Start="0,0"
+              End="-226.590476984191,23.5470591358866">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,8.66393201595373" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,8.66393201595373"
+                    Point2="0,12.6639320159537"
+                    Point3="-4,12.6639320159537" />
+                  <mssgle:LineSegment
+                    End="-222.590476984191,12.6639320159537" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-222.590476984191,12.6639320159537"
+                    Point2="-226.590476984191,12.6639320159537"
+                    Point3="-226.590476984191,16.6639320159537" />
+                  <mssgle:LineSegment
+                    End="-226.590476984191,23.5470591358866" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Derived Column Output1]"
+          TopLeft="371.22857205959,129.247058771246">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,39.0352940385526"
+              Start="0,0"
+              End="0,31.5352940385526">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.5352940385526" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Derived Column Output]"
+          TopLeft="373.200000585403,292.294117599468">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,36.5294115240703"
+              Start="0,0"
+              End="0,29.0294115240703">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.0294115240703" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Dim_Road Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Dim_Traffic_Control Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Dim Damage Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Dim_Surrounding_Conditions Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
