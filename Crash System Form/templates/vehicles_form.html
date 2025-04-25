@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vehicle Data Entry</title>
+</head>
+<body>
+    <h1>Vehicle Information</h1>
+    
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <ul>
+            {% for category, message in messages %}
+                <li style="color: {% if category == 'success' %}green{% else %}red{% endif %}">{{ message }}</li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+    
+    <form method="POST" action="{{ url_for('vehicles') }}">
+        <div>
+            <label>Unit Number:</label>
+            <input type="text" name="unit_no" required>
+        </div>
+        <div>
+            <label>Unit Type:</label>
+            <input type="text" name="unit_type">
+        </div>
+        <div>
+            <label>Make:</label>
+            <input type="text" name="make">
+        </div>
+        <div>
+            <label>Model:</label>
+            <input type="text" name="model">
+        </div>
+        <div>
+            <label>License Plate State:</label>
+            <input type="text" name="lic_plate_state">
+        </div>
+        <div>
+            <label>Vehicle Year:</label>
+            <input type="number" name="vehicle_year">
+        </div>
+        <div>
+            <label>Vehicle Defect:</label>
+            <input type="text" name="vehicle_defect">
+        </div>
+        <div>
+            <label>Vehicle Type:</label>
+            <input type="text" name="vehicle_type">
+        </div>
+        <div>
+            <label>Vehicle Use:</label>
+            <input type="text" name="vehicle_use">
+        </div>
+        <div>
+            <label>Travel Direction:</label>
+            <input type="text" name="travel_direction">
+        </div>
+        <div>
+            <label>Maneuver:</label>
+            <input type="text" name="maneuver">
+        </div>
+        <div>
+            <label>Occupant Count:</label>
+            <input type="number" name="occupant_cnt">
+        </div>
+        <div>
+            <label>First Contact Point:</label>
+            <input type="text" name="first_contact_point">
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+    <p><a href="{{ url_for('home') }}">Back to Home</a></p>
+</body>
+</html>

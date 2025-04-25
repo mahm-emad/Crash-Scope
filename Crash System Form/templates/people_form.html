@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Person Data Entry</title>
+</head>
+<body>
+    <h1>Person Information</h1>
+    
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <ul>
+            {% for category, message in messages %}
+                <li style="color: {% if category == 'success' %}green{% else %}red{% endif %}">{{ message }}</li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+    
+    <form method="POST" action="{{ url_for('people') }}">
+        <div>
+            <label>Person Type:</label>
+            <input type="text" name="person_type">
+        </div>
+        <div>
+            <label>Sex:</label>
+            <input type="text" name="sex">
+        </div>
+        <div>
+            <label>Age:</label>
+            <input type="number" name="age">
+        </div>
+        <div>
+            <label>Driver's License State:</label>
+            <input type="text" name="drivers_license_state">
+        </div>
+        <div>
+            <label>Driver's License Class:</label>
+            <input type="text" name="drivers_license_class">
+        </div>
+        <div>
+            <label>Safety Equipment:</label>
+            <input type="text" name="safety_equipment">
+        </div>
+        <div>
+            <label>Airbag Deployed:</label>
+            <input type="text" name="airbag_deployed">
+        </div>
+        <div>
+            <label>Ejection:</label>
+            <input type="text" name="ejection">
+        </div>
+        <div>
+            <label>Injury Classification:</label>
+            <input type="text" name="injury_classification">
+        </div>
+        <div>
+            <label>Driver Action:</label>
+            <input type="text" name="driver_action">
+        </div>
+        <div>
+            <label>Physical Condition:</label>
+            <input type="text" name="physical_condition">
+        </div>
+        <div>
+            <label>BAC Result:</label>
+            <input type="text" name="bac_result">
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+    <p><a href="{{ url_for('home') }}">Back to Home</a></p>
+</body>
+</html>
