@@ -6,20 +6,20 @@ Crash Scope is an end-to-end data pipeline and analytics solution designed to un
 ---
 
 ## 📌 Table of Contents
-1. [Background](#background)
-2. [Purpose](#purpose)
-3. [Competitor Analysis](#competitor-analysis)
-4. [Customers](#customers)
-5. [Scope](#scope)
-6. [Stakeholders](#stakeholders)
-7. [Business Model](#business-model)
-8. [Objectives & Services](#objectives--services)
-9. [System Architecture](#system-architecture)
-10. [Data Warehouse Design](#data-warehouse-design)
-11. [Tools & Technologies](#tools--technologies)
-12. [Installation Guide](#installation-guide)
-13. [Data Flow Clarification](#data-flow-clarification)
-14. [Dashboards](#dashboards)
+1. Background
+2. Purpose
+3. Competitor Analysis
+4. Customers
+5. Scope
+6. Stakeholders
+7. Business Model
+8. Objectives & Services
+9. System Architecture
+10. Data Warehouse Design
+11. Tools & Technologies
+12. Installation Guide
+13. Data Flow Clarification
+14. Dashboards
 
 ---
 
