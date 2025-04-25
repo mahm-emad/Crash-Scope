@@ -1,5 +1,5 @@
 """
-Loading the Crash Location and number of units involved in the crash
+Loading the Crash Location and number of units involved in the crash that had been sent to Chicago police
 into our operational DB (Traffic_Crashes) Which is part of our new Crash system.
 
 The rest of the record data will be inserted using our Data entry Desktop app.
